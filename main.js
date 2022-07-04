@@ -20,7 +20,7 @@ const subscription = async () => {
   console.log(subscription);
 
   // Send Notification
-  await fetch("/subscription", {
+  await fetch("subscription", {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: {
