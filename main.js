@@ -5,7 +5,7 @@ const PUBLIC_VAPID_KEY =
 const subscription = async () => {
   // Service Worker
   console.log("Registering a Service worker"+{{ROOT_URL}});
-  const register = await navigator.serviceWorker.register("{{ROOT_URL}}{{worker.js}}", {
+  const register = await navigator.serviceWorker.register("{{ROOT_URL}}"+"/pwa/"+{{worker.js}}", {
     scope: "/"
   });
   console.log("New Service Worker");
