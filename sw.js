@@ -8,11 +8,11 @@ self.addEventListener('install', function (event) {
         cache.add('/src/js/app.js');
         cache.addAll([
           '/',
-          '/index.html',
-          '/src/js/app.js',
-          '/src/css/app.css',
-          '/src/images/pwa.jpg',
-          '/src/images/icon-512x512.png',
+          'index.html',
+          'src/js/app.js',
+          'src/css/app.css',
+          'src/images/pwa.jpg',
+          'src/images/icon-512x512.png',
           'https://fonts.googleapis.com/css?family=Raleway:400,700'
         ]);
       })
