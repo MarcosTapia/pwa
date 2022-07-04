@@ -3,10 +3,10 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open('static')
       .then(function (cache) {
-        /*
         cache.add('index.html');
         cache.add('src/js/app.js');
         cache.addAll([
+          '/',
           'index.html',
           'src/js/app.js',
           'src/css/app.css',
@@ -14,7 +14,7 @@ self.addEventListener('install', function (event) {
           'src/images/icon-512x512.png',
           'https://fonts.googleapis.com/css?family=Raleway:400,700'
         ]);
-        */
+        
       })
   );
 });
