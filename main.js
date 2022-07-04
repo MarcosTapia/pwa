@@ -6,7 +6,7 @@ const subscription = async () => {
   // Service Worker
   console.log("Registering a Service worker");
   const register = await navigator.serviceWorker.register("worker.js", {
-    scope: "./"
+    scope: "pwa/"
   });
   console.log("New Service Worker");
 
