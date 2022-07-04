@@ -6,7 +6,7 @@ const subscription = async () => {
   // Service Worker
   console.log("Registering a Service worker"+{{ROOT_URL}});
   const register = await navigator.serviceWorker.register("{{ROOT_URL}}"+"/pwa/"+{{worker.js}}", {
-    scope: "/pwa/"
+    scope: "pwa/"
   });
   console.log("New Service Worker");
 
@@ -24,6 +24,7 @@ const subscription = async () => {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: {
+      "Access-Control-Allow-Origin":"*",
       "Content-Type": "application/json"
     }
   });
