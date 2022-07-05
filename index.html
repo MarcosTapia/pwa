@@ -63,16 +63,7 @@ function urlBase64ToUint8Array(base64String) {
     
       
       
-const subscribir = async () => {
-      const subscription = await register.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
-      });     
-  
-  
-    };      
-      
-  console.log(subscribir);    
+ 
       
       
     
@@ -86,7 +77,19 @@ const subscribir = async () => {
           }
         });  
 
-    };          
+    };     
+      
+const subscribir = async () => {
+      const subscription = await register.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
+      });     
+  
+  
+    };      
+      
+  console.log(subscribir);   
+      
       
     subscription().catch(err => console.log("------> " + err));  
       console.log("Subscrito...");
