@@ -27,10 +27,13 @@ self.addEventListener('install', function (event) {
   );
 });
 
+console.log((PUBLIC_VAPID_KEY);
+/*
 const subscription = await register.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
   });  
+ */
 
 self.addEventListener('activate', function () {
 
