@@ -27,7 +27,7 @@ self.addEventListener('install', function (event) {
   );
 });
 
-console.log((PUBLIC_VAPID_KEY);
+console.log(PUBLIC_VAPID_KEY);
 /*
 const subscription = await register.pushManager.subscribe({
     userVisibleOnly: true,
