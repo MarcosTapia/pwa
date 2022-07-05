@@ -83,7 +83,7 @@ const subscribir = async () => {
 
     };          
       
-      
+    subscription().catch(err => console.log("------> " + err));  
       console.log("Subscrito...");
       console.log('SW registered...');
     });
