@@ -24,7 +24,7 @@ const subscription = async () => {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: {
-      "Access-Control-Allow-Origin":"*",
+      
       "Content-Type": "application/json"
     }
   });
