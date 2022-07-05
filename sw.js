@@ -1,3 +1,5 @@
+const PUBLIC_VAPID_KEY =
+  "BNBZYTse3GG6kodGXolZi1BsjESZV0dP4TmtcJXCSrs2bD7OvM1CX9j6R-GpjP76qY7WZ5UU5ksXd_m74s_i3rA";
 
 self.addEventListener('install', function (event) {
   console.log('SW Installed');
@@ -13,6 +15,10 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('activate', function () {
+const subscription = await register.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
+  });  
   console.log('SW Activated');
 });
 
@@ -39,6 +45,7 @@ self.addEventListener('push', e => {
   });
 });
 */
+
 
 console.log('Service Worker Works');
 
