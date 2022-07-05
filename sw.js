@@ -1,18 +1,4 @@
-const PUBLIC_VAPID_KEY = "BNBZYTse3GG6kodGXolZi1BsjESZV0dP4TmtcJXCSrs2bD7OvM1CX9j6R-GpjP76qY7WZ5UU5ksXd_m74s_i3rA";
-/*
-function urlBase64ToUint8Array(base64String) {
-  const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
-  const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
 
-  const rawData = window.atob(base64);
-  const outputArray = new Uint8Array(rawData.length);
-
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i);
-  }
-  return outputArray;
-}
-*/
 
 self.addEventListener('install', function (event) {
   console.log('SW Installed');
@@ -27,13 +13,6 @@ self.addEventListener('install', function (event) {
   );
 });
 
-console.log(PUBLIC_VAPID_KEY);
-/*
-const subscription = await register.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
-  });  
- */
 
 self.addEventListener('activate', function () {
 
