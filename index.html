@@ -55,12 +55,12 @@ function urlBase64ToUint8Array(base64String) {
     
    
   if ('serviceWorker' in navigator) {
-      //subscribir()
-    const subscribir = asyn function() => {
-      await register.pushManager.subscribe({
+      
+    const subscribir = async () => {
+      const subscription = await register.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
-      });  
+      });       
       console.log("Subscrito...");
     };
     
