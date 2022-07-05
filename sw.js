@@ -20,20 +20,20 @@ self.addEventListener('install', function (event) {
     caches.open('static')
       .then(function (cache) {
         cache.add('index.html');
-        cache.add('src/js/app.js');
+        
         
         
       })
   );
 });
 
-
-
-self.addEventListener('activate', function () {
 const subscription = await register.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
   });  
+
+self.addEventListener('activate', function () {
+
   console.log('SW Activated');
 });
 
