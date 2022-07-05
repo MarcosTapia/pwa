@@ -19,6 +19,7 @@ self.addEventListener('activate', function () {
 
 
 self.addEventListener('push', e => {
+  console.log("*******************************************");
   const data = e.data.json();
   console.log(data)
   console.log('Notification Received');
