@@ -1,3 +1,4 @@
+/*
 self.addEventListener('install', function (event) {
   console.log('SW Installed');
   event.waitUntil(
@@ -46,4 +47,4 @@ self.addEventListener('push', e => {
   });
 });
 
-
+*/
