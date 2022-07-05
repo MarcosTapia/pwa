@@ -101,20 +101,20 @@
 </header>
 <article class="card" id="pwa">
   <div class="card__image">
-    <img src="src/images/icon-512x512.png" alt="WeWire">
+    <img src="src/images/icon-512x512.png" alt="WeWire" style="height;200px;">
   </div>
   <div class="card__content">
     <p>PWAs are great, since you can build native-mobile-app-like experiences.</p>
-    <p>Core features are:</p>
-    <ul>
-      <li>Installable on <strong>Homescreen</strong></li>
-      <li><strong>Offline support</strong> with service workers</li>
-      <li>Usage of various <strong>caching strategies</strong></li>
-      <li>Web <strong>push notifications</strong></li>
-      <li><strong>Background sync</strong></li>
-      <li>Native device features like <strong>camera</strong></li>
-      <li>Way more...</li>
-    </ul>
+          <p style="font-size: 28px;color: rgb(5, 5, 122); margin-top: 70px;">Wewire Interaction with broker</p>
+          <p style="font-size: 24px;color: rgb(5, 5, 122); ">Operations</p>
+          <p style="font-size: 18px;color: rgb(5, 5, 122);">Ingresa el mensaje: </p>
+          <input class="form-control" type="text" placeholder="Mensaje..." id="msgToSend">          
+          <input type="button" onclick="enviaMsg();" value="Enviar Mensaje" class="btn btn-success" style="margin-top: 20px;"/>
+
+          <p style="font-size: 24px;color: rgb(5, 5, 122); margin-top: 100px;">Connection Status</p>
+          <p style="font-size: 18px;color: rgb(5, 5, 122); " id="connectionStatus"></p>
+          <p style="font-size: 16px;color: rgb(5, 5, 122);" id="msgs"></p>
+    
   </div>
   
   <div class="card__details">
