@@ -38,12 +38,14 @@
     <p>Don't hesitate, dive into PWAs!</p>
   </div>
 </article>
+  <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js')
     .then(function() {
       console.log('SW registered');
     });
   }
+    </script>
   <!--
   <script src="main.js"></script>
  -->
