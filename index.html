@@ -60,13 +60,29 @@ function urlBase64ToUint8Array(base64String) {
     
     navigator.serviceWorker.register('sw.js')
     .then(function() {
+  const subscribe = async () => {    
+        const a =await fetch("subscription", {
+          method: "POST",
+          body: JSON.stringify(subscription),
+          headers: {
+
+            "Content-Type": "application/json"
+          }
+        });  
+
+    };       
+      
+      
 const subscribir = async () => {
       const subscription = await register.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
-      });       
-      
+      });     
     };      
+      
+    
+      
+      
       
       console.log("Subscrito...");
       console.log('SW registered...');
