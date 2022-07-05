@@ -53,11 +53,16 @@ function urlBase64ToUint8Array(base64String) {
   return outputArray;
 }
     
-  if ('serviceWorker' in navigator) {
-    const subscription = await register.pushManager.subscribe({
+    async function subscribir() {
+      const subscription = await register.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
-      });    
+      });  
+      console.log("Subscrito...");
+    }
+    
+  if ('serviceWorker' in navigator) {
+      subscribir()
     
     navigator.serviceWorker.register('sw.js')
     .then(function() {
