@@ -38,9 +38,15 @@
     <p>Don't hesitate, dive into PWAs!</p>
   </div>
 </article>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+    .then(function() {
+      console.log('SW registered');
+    });
+  }
+  <!--
   <script src="main.js"></script>
-  <script src="src/js/app.js"></script>
-
+ -->
 
 </body>
 </html>
