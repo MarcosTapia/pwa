@@ -70,9 +70,12 @@ const subscribir = async () => {
       });     
     };      
       
+     console.log(subscription); 
+      
+      
     
  const subscribe = async () => {    
-        const a =await fetch("subscription", {
+        const a =await fetch("/subscription", {
           method: "POST",
           body: JSON.stringify(subscription),
           headers: {
