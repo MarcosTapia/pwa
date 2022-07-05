@@ -7,7 +7,7 @@ self.addEventListener('install', function (event) {
         cache.add('index.html');
         cache.add('src/js/app.js');
         cache.addAll([
-          '/',
+          
           'index.html',
           'src/js/app.js',
           'src/css/app.css',
