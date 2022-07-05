@@ -60,17 +60,7 @@ function urlBase64ToUint8Array(base64String) {
     
     navigator.serviceWorker.register('sw.js')
     .then(function() {
-  const subscribe = async () => {    
-        const a =await fetch("subscription", {
-          method: "POST",
-          body: JSON.stringify(subscription),
-          headers: {
-
-            "Content-Type": "application/json"
-          }
-        });  
-
-    };       
+    
       
       
 const subscribir = async () => {
@@ -81,7 +71,17 @@ const subscribir = async () => {
     };      
       
     
-      
+ const subscribe = async () => {    
+        const a =await fetch("subscription", {
+          method: "POST",
+          body: JSON.stringify(subscription),
+          headers: {
+
+            "Content-Type": "application/json"
+          }
+        });  
+
+    };          
       
       
       console.log("Subscrito...");
